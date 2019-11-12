@@ -31,12 +31,11 @@ class Digit_Classifier(object):
         open_train_images = open(train_images, 'r')
         open_train_labels = open(train_labels, 'r')
         counter = 0
-        for k in range(0.1, 10, 0.1):
-            for data_labels in open_train_labels:
+        for k in range(0.1, 10.0, 0.1):
+            for i in open_train_labels:
                 counter += 1
                 data_labels = data_labels.rstrip('\n')
                 sample = []
-                row = list()
                 for row in range(self.size_width):
                     line = open_train_images.readline()
 
